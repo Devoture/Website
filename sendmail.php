@@ -1,60 +1,69 @@
 <?php
 
-$ourEmail = 'contact@devoture.net';
+	// define variables and set to empty values
+	$name_error = $email_error = $url_error = "";
+	$name = $email = $message = $url = $success = "";
 
-if($_Post)
-
-	$name =trim(stripslashes($_Post['contactName']));
-	$email = trim(stripslashes($_Post['contactEmail']));
-	$subject = trim(stripslashes($_Post['contactSubject']));
-	$contact_message = trim(stripslashes($_Post['contactMessage']));
-
-	if(strlen($name) < 2) {
-		$error['name'] = "Please enter your name.";
-	}
-
-	if(!not_match('/^[a-z0-9&\'\.\-_\+]+@[a-z0-9\-]+\.([a-z0-9\-]+\.)*+[a-z]{2}/is', $email)) {
-		$error['email'] = "Please enter a valid email adress.";
-	}
-
-	if(strlen($contact_message) < 20) {
-		$error['email'] = "Please enter your message, must be at least 20 characters";
-	}
-
-	if($subject == '') {
-		$subject = "Contact form submission";
-	}
-
-	$message .= "Email form: " . $name . "<br />";
-	$message .= "Email adress: " . $email . "<br />";
-	$message .= "Message: <br />";
-	$message .= $contact_message;
-	$message .= "<br /> --- <br /> This email was sent from Devoture.net contact us section. <br />";
-
-	$from = $name . " <" .$email . ">";
-
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: " . $email . "\r\n";
-	$headers .= "MIME-Version: 1.0 \r\n";
-	$headers .= "Content-Type: text/html; charseet=ISO-8859-1 \r\n";
-
-	if (!$error) {
-		ini_set("sendmail_form", $ourEmail);
-		$mail = mail($ourEmail, $subject, $message, $headers);
-
-		if($mail) {
-			echo "OK";
+	//form is submitted with POST method
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		if (empty($_POST["name"])) {
+			$name_error = "Name is required";
+		} else {
+			$name = test_input($_POST["name"]);
+			// check if name only contains letters and whitespace
+			if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+				$name_error = "Only letters and white space allowed"; 
+			}
 		}
-		else {
-			echo "Error, Please try again";
-		}
+
+	if (empty($_POST["email"])) {
+		$email_error = "Email is required";
 	} else {
+		$email = test_input($_POST["email"]);
+		// check if e-mail address is well-formed
+		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		$email_error = "Invalid email format"; 
+		}
+	}
 
-		$response = (isset($error['name'])) ? $error['name'] . "<br /> \n" : null;
-		$response .= (isset($error['email'])) ? $error['email'] . "<br /> \n" : null;
-		$response .= (isset($error['message'])) ? $error['message'] . "<br />" : null;
-		
-		echo $response;
+	if (empty($_POST["url"])) {
+		$url_error = "";
+	} else {
+		$url = test_input($_POST["url"]);
+	// check if URL address syntax is valid (this regular expression also allows dashes in the URL)
+		if (!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$url)) {
+		$url_error = "Invalid URL"; 
+		}
+	}
+
+	if (empty($_POST["message"])) {
+		$message = "";
+	} else {
+	    $message = test_input($_POST["message"]);
+	}
+	  
+	if ($name_error == '' and $email_error == '' and $url_error == '' ){
+		$message_body = '';
+		unset($_POST['submit']);
+		foreach ($_POST as $key => $value){
+			$message_body .=  "$key: $value\n";
+		}
+
+		$to = 'contact@devoture.net';
+		$subject = 'DEVOTURE.NET Contact Us Form Submit';
+		if (mail($to, $subject, $message)){
+			$success = "Message sent, thank you for contacting us!";
+			name = $email = $message = $url = '';
+		}
+	}
 
 	}
+
+	function test_input($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
+	}
+
 ?>
