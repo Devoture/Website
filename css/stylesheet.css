@@ -45,7 +45,7 @@
 	text-transform: uppercase;
 }
 
-.btn {
+.btn, .btn:hover, .btn:active {
 	font-size: 18px;
 	color: #FFF;
 	padding: 12px 22px;
@@ -53,9 +53,9 @@
 	border: 2px solid #FFF;
 }
 
-/*.container {
+.container {
 	margin: 4% auto;
-}*/
+}
 
 #icon {
 	max-width: 300px;
@@ -91,10 +91,6 @@ h4 {
 .fa:hover {
 	text-decoration: none;
 	color: #D5D5D5;
-}
-
-#aboutus {
-	padding-top: 5%;
 }
 
 @media (max-width: 600px) {
