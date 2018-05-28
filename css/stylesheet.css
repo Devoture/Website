@@ -1,0 +1,104 @@
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #77bbff;
+	color: #FFF;
+	padding: 1% 0;
+	font-size: 1.5em;
+	border: 0;
+}
+
+.navbar-brand {
+	float: left;
+	min-height: 55px;
+	padding: 0 15px 5px;
+}
+
+.navbar-inverse .navbar-nav .active a, .navbar-inverse .navbar-nav .active a:focus, .navbar-inverse .navbar-nav .active a:hover {
+	color: #FFF;
+	background-color: #77bbff;
+}
+
+.navbar-inverse .navbar-nav li a {
+	color: #FFF;
+}
+
+.carousel-caption {
+	top: 55%;
+	transform: translateY(-50%);
+	text-transform: uppercase;
+}
+
+.btn {
+	font-size: 18px;
+	color: #FFF;
+	padding: 12px 22px;
+	background-color: #5E4485;
+	border: 2px solid #FFF;
+}
+
+.container {
+	margin: 4% auto;
+}
+
+#icon {
+	max-width: 300px;
+	margin: 10% auto;
+}
+
+#picture {
+	width: 100%;
+}
+
+.devoture-img {
+	height: 55px;
+	width: 200px;
+}
+
+footer {
+	width: 100%;
+	background-color: #77bbff;
+	padding: 3%;
+	color: white;
+}
+
+h4 {
+	font-weight: bold;
+}
+
+.fa {
+	padding: 10px;
+	font-size: 30px;
+	color: white;
+}
+
+.fa:hover {
+	text-decoration: none;
+	color: #D5D5D5;
+}
+
+@media (max-width: 600px) {
+	.fa {
+		font-size: 20px;
+		padding: 5px;
+	}
+}
+
+@media (max-width: 600px) {
+	.carousel-caption {
+		display: none;
+	}
+
+	#icon {
+		max-width: 200px;
+	}
+	h2 {
+		font-size: 1.7em;
+	}
+}
+
+@media (max-width: 1000px) {
+	.fa {
+		padding: 5px;
+	}
+}
