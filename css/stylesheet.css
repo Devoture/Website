@@ -6,6 +6,10 @@
 	padding: 1% 0;
 	font-size: 1.5em;
 	border: 0;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 100;
 }
 
 .navbar-brand {
@@ -23,6 +27,18 @@
 	color: #FFF;
 }
 
+.landing-wrapper {
+	margin-bottom: 1.1%;
+	border-radius: 0;
+	padding: 1% 0;
+	font-size: 1.5em;
+	border: 0;
+	width: 100%;
+	top: 0px;
+	min-height: 55px;
+	padding: 0 15px 5px
+}
+
 .carousel-caption {
 	top: 55%;
 	transform: translateY(-50%);
@@ -37,9 +53,9 @@
 	border: 2px solid #FFF;
 }
 
-.container {
+/*.container {
 	margin: 4% auto;
-}
+}*/
 
 #icon {
 	max-width: 300px;
@@ -75,6 +91,10 @@ h4 {
 .fa:hover {
 	text-decoration: none;
 	color: #D5D5D5;
+}
+
+#aboutus {
+	padding-top: 5%;
 }
 
 @media (max-width: 600px) {
