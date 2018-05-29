@@ -71,6 +71,14 @@
 	width: 200px;
 }
 
+.aboutuspadding {
+	padding-bottom: 5%;
+}
+
+#usingpadding {
+	padding-bottom: 5%;
+}
+
 footer {
 	width: 100%;
 	background-color: #77bbff;
