@@ -286,10 +286,6 @@ input, textarea, button {
 	h2 {
 		font-size: 1.7em;
 	}
-
-	.projecttitle {
-		font-size: 15px;
-	}
 }
 
 @media (max-width: 768px) {
