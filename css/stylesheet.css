@@ -154,6 +154,11 @@ h4 {
 	cursor: pointer;
 }
 
+hr {
+	border-color: black;
+	padding-bottom: 4%;
+}
+
 @media (max-width: 850px) {
 	.fa {
 		font-size: 20px;
