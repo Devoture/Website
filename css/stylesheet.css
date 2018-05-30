@@ -178,22 +178,6 @@ hr {
 	margin-top: 20px;
 }
 
-.name {
-	width: 100%;
-}
-
-.email {
-	width: 100%;
-}
-
-.website {
-	width: 100%;
-}
-
-.message {
-	width: 100%;
-}
-
 input, textarea, button { 
 	margin-top: 10px;
 }
@@ -261,6 +245,19 @@ input, textarea, button {
 	color: #B80000;
 	font-size: 26px;
 	margin: -3px 0 0 1%;
+}
+
+.formh2 {
+	padding-bottom: 4%;
+}
+
+#contact {
+	width: 400px; 
+	margin: 0 auto;
+}
+
+#formpadding {
+	padding-bottom: 1%;
 }
 
 @media (max-width: 850px) {
