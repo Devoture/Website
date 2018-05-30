@@ -125,7 +125,6 @@ h4 {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: auto;
 	overflow: auto;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, .7);
@@ -137,7 +136,7 @@ h4 {
 	padding: 20px;
 	border: 1px solid #888;
 	width: 50%;
-	height: 50%;
+	height: auto;
 }
 
 .close {
@@ -166,21 +165,40 @@ hr {
 	padding-bottom: 4%;
 }
 
+#video {
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 90%; 
+	height: 450px;
+}
+
+@media (max-width: 1300px) {
+	#video {
+		height: 300px;
+	}
+}
+
 @media (max-width: 850px) {
 	.fa {
 		font-size: 20px;
 		padding: 5px;
 	}
+
+	#video {
+		height: 200px;
+	}
 }
 
 @media (max-width: 600px) {
-	.carousel-caption {
-		display: none;
+	#video {
+		height: 100px;
 	}
 
 	#icon {
 		max-width: 200px;
 	}
+
 	h2 {
 		font-size: 1.7em;
 	}
