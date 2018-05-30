@@ -154,6 +154,13 @@ h4 {
 	cursor: pointer;
 }
 
+.maillink,
+.maillink:hover,
+.maillink:active,
+.maillink:focus {
+	color: white;
+}
+
 hr {
 	border-color: black;
 	padding-bottom: 4%;
