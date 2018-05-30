@@ -169,14 +169,6 @@ hr {
 	display: block;
 	margin: 0 auto;
 	margin-top: 20px;
-	width: 90%; 
-	height: 450px;
-}
-
-@media (max-width: 1300px) {
-	#video {
-		height: 300px;
-	}
 }
 
 @media (max-width: 850px) {
@@ -184,17 +176,9 @@ hr {
 		font-size: 20px;
 		padding: 5px;
 	}
-
-	#video {
-		height: 200px;
-	}
 }
 
 @media (max-width: 600px) {
-	#video {
-		height: 100px;
-	}
-
 	#icon {
 		max-width: 200px;
 	}
