@@ -244,7 +244,7 @@ input, textarea, button {
 .required-field-block .required-icon .text {
 	color: #B80000;
 	font-size: 26px;
-	margin: -3px 0 0 1%;
+	margin: -3px -10px 0 1%;
 }
 
 .formh2 {
@@ -275,6 +275,10 @@ input, textarea, button {
 	.fa {
 		font-size: 20px;
 		padding: 5px;
+	}
+
+	#enginepicture {
+		margin: auto;
 	}
 }
 
