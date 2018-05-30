@@ -251,13 +251,24 @@ input, textarea, button {
 	padding-bottom: 4%;
 }
 
-#contact {
+#form {
 	width: 400px; 
 	margin: 0 auto;
 }
 
 #formpadding {
 	padding-bottom: 1%;
+	width: 50%;
+	margin: auto;
+}
+
+#messagepadding {
+	width: 50%;
+	margin: auto;
+}
+
+.btndiv {
+	margin-left: 24.8%;
 }
 
 @media (max-width: 850px) {
