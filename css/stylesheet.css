@@ -294,6 +294,11 @@ input, textarea, button {
 	}
 }
 
+.active {
+	-webkit-transform: translateY(-8px);
+	transform: translateY(-8px);
+}
+
 .navlink {
 	display: inline-block;
 	vertical-align: middle;
@@ -307,9 +312,15 @@ input, textarea, button {
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
-.navlink:hover, .navlink:focus, .navlink:active {
+
+.navlink:hover, .navlink:focus {
 	-webkit-transform: translateY(-8px);
 	transform: translateY(-8px);
+}
+
+.navlink:visited {
+	-webkit-transform: translateY(0px);
+	transform: translateY(0px);
 }
 
 @media (max-width: 850px) {
