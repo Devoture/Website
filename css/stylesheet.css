@@ -313,14 +313,9 @@ input, textarea, button {
 	transition-timing-function: ease-out;
 }
 
-.navlink:hover, .navlink:focus {
+.navlink:hover {
 	-webkit-transform: translateY(-8px);
 	transform: translateY(-8px);
-}
-
-.navlink:visited {
-	-webkit-transform: translateY(0px);
-	transform: translateY(0px);
 }
 
 @media (max-width: 850px) {
